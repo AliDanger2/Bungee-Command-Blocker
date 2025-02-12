@@ -35,8 +35,8 @@ all-players-message: "&aSent {AMOUNT_OF_PLAYERS} players to {SERVER}, &eExcept {
 <br>
 ✅ Can reload the config using ``/bcb reload``
 
-##📜License
+## 📜License
 This plugin is open-source and free to use.
 
-##⭐ Support & Feedback
+## ⭐ Support & Feedback
 If you encounter issues or have suggestions, feel free to leave a comment!
