@@ -32,3 +32,5 @@ all-players-message: "&aSent {AMOUNT_OF_PLAYERS} players to {SERVER}, &eExcept {
 ✅ Fully customizable messages and blocked commands via config.yml
 <br>
 ✅ Lightweight and efficient for BungeeCord networks
+<br>
+✅ Can reload the config using ``/bcb reload``
