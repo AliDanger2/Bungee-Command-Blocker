@@ -28,5 +28,7 @@ all-players-message: "&aSent {AMOUNT_OF_PLAYERS} players to {SERVER}, &eExcept {
 ```
 ## 📌 Features
 ✅ Block specific commands on selected servers
+<br>
 ✅ Fully customizable messages and blocked commands via config.yml
+<br>
 ✅ Lightweight and efficient for BungeeCord networks
