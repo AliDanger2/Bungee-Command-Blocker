@@ -8,6 +8,7 @@ How to install :
 <br>
 How it works :
 You can change the blocked server, blocked commands and the error messages in the config.yml
+<br>
 ```
 # Blocked Server(s) :
 blocked-servers:
