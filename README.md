@@ -1,5 +1,6 @@
 # Bungee-Command-Blocker
-A Simple Plugin That Allows You To Block Certain Commands In Certain Servers Via Bungee./n
+A Simple Plugin That Allows You To Block Certain Commands In Certain Servers Via Bungee.
+<br>
 How to install :
 1. Download the .jar file
 2. Copy and paste it into your Bungee server's plugins folder
