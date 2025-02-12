@@ -5,6 +5,7 @@ How to install :
 1. Download the .jar file
 2. Copy and paste it into your Bungee server's plugins folder
 3. Run your bungee server and you're all set to go!
+<br>
 How it works :
 You can change the blocked server, blocked commands and the error messages in the config.yml
 ```
