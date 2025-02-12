@@ -1,0 +1,14 @@
+# Blocked Server(s) :
+blocked-servers:
+  - "Auth"
+# Blocked Command(s) :
+blocked-commands:
+  - "server"
+  - "send"
+  - "connect"
+# Error Message :
+error-message: "&cYou cannot use this command on this player!"
+# /send Error Messages :
+no-players-moved-message: "&cNo players were moved because all the players were in a blocked server."
+all-players-moved-message: "&aSent {AMOUNT_OF_PLAYERS} {PLAYER_TEXT} to {SERVER}."
+partial-players-moved-message: "&aSent {AMOUNT_OF_PLAYERS} {PLAYER_TEXT} to {SERVER}, &eexcept {AMOUNT_OF_PLAYERS_IN_BLOCKED_SERVER} {EXCEPTION_PLAYER_TEXT} which were in a blocked server."
