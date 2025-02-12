@@ -1,4 +1,0 @@
-name: Bungee Command Blocker(BCB)
-main: me.bungeecommandblocker.bungeecommandblocker.BungeeCommandBlocker
-version: "${project.version}"
-author: Ali_Danger
