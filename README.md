@@ -10,21 +10,20 @@ A Simple Plugin That Allows You To Block Certain Commands In Certain Servers Via
 You can modify the blocked servers, blocked commands, and error messages in `config.yml`.  
 
 ```yaml
-# Blocked Server(s)
+# Blocked Server(s) :
 blocked-servers:
   - "Auth"
-
-# Blocked Command(s)
+# Blocked Command(s) :
 blocked-commands:
   - "server"
   - "send"
   - "connect"
-
-# Error Message
+# Error Message :
 error-message: "&cYou cannot use this command on this player!"
-
-# /send all (Server) Error Message
-all-players-message: "&aSent {AMOUNT_OF_PLAYERS} players to {SERVER}, &eExcept {AMOUNT_OF_PLAYERS_IN_BLOCKED_SERVER} players which were in a blocked server."
+# /send Error Messages :
+no-players-moved-message: "&cNo players were moved because all the players were in a blocked server."
+all-players-moved-message: "&aSent {AMOUNT_OF_PLAYERS} {PLAYER_TEXT} to {SERVER}."
+partial-players-moved-message: "&aSent {AMOUNT_OF_PLAYERS} {PLAYER_TEXT} to {SERVER}, &eexcept {AMOUNT_OF_PLAYERS_IN_BLOCKED_SERVER} {EXCEPTION_PLAYER_TEXT} which were in a blocked server."
 ```
 ## 📌 Features
 ✅ Block specific commands on selected servers
