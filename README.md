@@ -25,7 +25,7 @@ error-message: "&cYou cannot use this command on this player!"
 
 # /send all (Server) Error Message
 all-players-message: "&aSent {AMOUNT_OF_PLAYERS} players to {SERVER}, &eExcept {AMOUNT_OF_PLAYERS_IN_BLOCKED_SERVER} players which were in a blocked server."
-
+```
 ## 📌 Features
     ✅ Block specific commands on selected servers
     ✅ Fully customizable messages and blocked commands via config.yml
