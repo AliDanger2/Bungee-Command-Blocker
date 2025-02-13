@@ -39,6 +39,14 @@ public class ConfigManager {
         return config.getStringList("blocked-servers");
     }
 
+    public List<String> getBlockedCommands() {
+        return config.getStringList("blocked-commands");
+    }
+
+    public String getErrorMessage() {
+        return config.getString("error-message", "&cYou cannot use this command on a player in a blocked server!");
+    }
+
     public String getNoPlayersMovedMessage() {
         return config.getString("no-players-moved-message", "&cNo players were moved because all the players were in a blocked server.");
     }
