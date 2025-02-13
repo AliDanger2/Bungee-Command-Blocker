@@ -73,13 +73,17 @@ public class BungeeCommandBlocker extends Plugin implements Listener {
         }
 
         ProxiedPlayer sender = (ProxiedPlayer) event.getSender();
-        String[] args = event.getMessage().substring(1).split(" ");
-        String command = args[0];
+        String[] args = event.getMessage().substring(1).split(" "); // Remove "/"
+        if (args.length == 0) return;
 
+        String command = args[0]; // The main command
         List<String> blockedServers = configManager.getBlockedServers();
+        List<String> blockedCommands = configManager.getBlockedCommands();
+        String errorMessage = ChatColor.translateAlternateColorCodes('&', configManager.getErrorMessage());
 
+        // Handle `/send all (server)`
         if (command.equalsIgnoreCase("send") && args.length > 1 && args[1].equalsIgnoreCase("all")) {
-            if (args.length < 3) return;
+            if (args.length < 3) return; // Prevent errors if no target server is specified
             String targetServer = args[2];
 
             List<ProxiedPlayer> allPlayers = getProxy().getPlayers().stream().collect(Collectors.toList());
@@ -90,14 +94,17 @@ public class BungeeCommandBlocker extends Plugin implements Listener {
             int blockedCount = blockedPlayers.size();
             int allowedCount = allPlayers.size() - blockedCount;
 
+            // Cancel the event to prevent the default behavior
             event.setCancelled(true);
 
+            // Send only allowed players
             for (ProxiedPlayer player : allPlayers) {
                 if (!blockedPlayers.contains(player)) {
                     player.connect(getProxy().getServerInfo(targetServer));
                 }
             }
 
+            // Build the proper message
             String message;
             if (allowedCount == 0) {
                 message = configManager.getNoPlayersMovedMessage();
@@ -115,7 +122,19 @@ public class BungeeCommandBlocker extends Plugin implements Listener {
                         .replace("{EXCEPTION_PLAYER_TEXT}", (blockedCount == 1 ? "player" : "players"));
             }
 
+            // Send formatted message to sender
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
+            return;
+        }
+
+        // Block all other commands if they target a player in a blocked server
+        if (blockedCommands.contains(command) && args.length > 1) {
+            ProxiedPlayer target = getProxy().getPlayer(args[1]);
+
+            if (target != null && blockedServers.contains(target.getServer().getInfo().getName())) {
+                sender.sendMessage(errorMessage);
+                event.setCancelled(true);
+            }
         }
     }
 
