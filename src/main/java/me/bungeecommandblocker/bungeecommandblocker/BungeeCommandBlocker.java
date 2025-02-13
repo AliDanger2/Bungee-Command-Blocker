@@ -37,7 +37,7 @@ public class BungeeCommandBlocker extends Plugin implements Listener {
                 "            &a'----------------'  '----------------'  '----------------' \n" +
                 "                      &a╔════════════════════════════════════╗\n" +
                 "                      &a║    &r&bBungeeCommandBlocker &aEnabled    ║\n" +
-                "                      &a║           &bVersion &r: [&a1.0&r]          &a║\n" +
+                "                      &a║           &bVersion &r: [&a1.2&r]          &a║\n" +
                 "                      &a║            &bBy &6Ali_Danger           &a║\n" +
                 "                      &a╚════════════════════════════════════╝\n"));
 
@@ -60,7 +60,7 @@ public class BungeeCommandBlocker extends Plugin implements Listener {
                 "            &a'----------------'  '----------------'  '----------------' \n" +
                 "                      &a╔════════════════════════════════════╗\n" +
                 "                      &a║   &r&bBungeeCommandBlocker &aDisabled!   ║\n" +
-                "                      &a║           &bVersion &r: [&a1.0&r]          &a║\n" +
+                "                      &a║           &bVersion &r: [&a1.2&r]          &a║\n" +
                 "                      &a║            &bBy &6Ali_Danger           &a║\n" +
                 "                      &a╚════════════════════════════════════╝\n"));
         getLogger().info(ChatColor.translateAlternateColorCodes('&', "&eBungeeCommandBlocker &cdisabled!"));
